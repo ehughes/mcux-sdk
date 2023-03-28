@@ -1,0 +1,4 @@
+# config to select component, the format is CONFIG_USE_${component}
+set(CONFIG_USE_middleware_multicore_rpmsg_lite_freertos_MCXN947_cm33_core0 true)
+set(CONFIG_USE_driver_lpuart_MCXN947_cm33_core0 true)
+set(CONFIG_USE_middleware_freertos-kernel_MCXN947_cm33_core0 true)

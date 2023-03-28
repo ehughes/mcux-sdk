@@ -1,0 +1,63 @@
+Overview
+========
+The flexio_spi_master_edma_lpspi_slave example shows how to use flexio spi master driver in edma way:
+
+In this example, a flexio simulated master connect to a lpspi slave .
+
+
+
+Toolchain supported
+===================
+- IAR embedded Workbench  9.30.1
+- Keil MDK  5.37
+- GCC ARM Embedded  10.3.1
+- MCUXpresso  11.7.0
+
+Hardware requirements
+=====================
+- Mini/micro USB cable
+- MCX-N9XX-BRK Board
+- Personal Computer
+
+Board settings
+==============
+To make the example work, connections needed to be as follows:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MASTER(FlexIO SPI)          connect to      SLAVE(LPSPI1)
+Pin Name   Board Location                   Pin Name    Board Location
+SOUT       J1 pin 68                       SIN         J2 pin 35
+SIN        J1 pin 67                       SOUT        J2 pin 37
+SCK        J1 pin 69                       SCK         J2 pin 33
+PCS0       J1 pin 70                       PCS0        J2 pin 31
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Prepare the Demo
+================
+1.  Connect a USB cable between the host PC and the EVK board J5.
+2.  Open a serial terminal with the following settings using USB2TLL connect to P1_8,P1_9 on J2 60,59 Pin
+    - 115200 baud rate
+    - 8 data bits
+    - No parity
+    - One stop bit
+    - No flow control
+3.  Download the program to the target board.
+4.  Either press the reset button on your board or launch the debugger in your IDE to begin running the demo.
+
+Running the demo
+================
+The log below shows the output of the hello world demo in the terminal window:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+FLEXIO Master edma - LPSPI Slave interrupt example start.
+This example use one flexio spi as master and one lpspi instance as slave on one board.
+Master uses edma and slave uses interrupt way.
+Please make sure you make the correct line connection. Basically, the connection is:
+FLEXIO_SPI_master -- LPSPI_slave   
+       CLK        --    CLK  
+       PCS        --    PCS  
+       SOUT       --    SIN  
+       SIN        --    SOUT 
+This is LPSPI slave call back.
+FLEXIO SPI master <-> LPSPI slave transfer all data matched!
+
+End of example.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
