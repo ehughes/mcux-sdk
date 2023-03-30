@@ -1,7 +1,0 @@
-# config to select component, the format is CONFIG_USE_${component}
-set(CONFIG_USE_driver_lpuart_MCXN947_cm33_core0 true)
-set(CONFIG_USE_middleware_usb_host_ehci_MCXN947_cm33_core0 true)
-set(CONFIG_USE_middleware_usb_host_khci_MCXN947_cm33_core0 true)
-set(CONFIG_USE_middleware_usb_device_ehci_MCXN947_cm33_core0 true)
-set(CONFIG_USE_middleware_usb_device_khci_MCXN947_cm33_core0 true)
-set(CONFIG_USE_middleware_baremetal_MCXN947_cm33_core0 true)
